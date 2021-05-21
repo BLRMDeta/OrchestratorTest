@@ -1,0 +1,40 @@
+{
+  "duration": 25.91,
+  "loop": false,
+  "outPoints": [],
+  "objects": [
+    {
+      "objectId": "13-Outro",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 0,
+          "duration": 25.91,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/502de404-9203-4114-aa05-9d1c0d7049dc/13_Outro_000000/manifest.mpd",
+            "urlSafari": "audio/502de404-9203-4114-aa05-9d1c0d7049dc/13_Outro_000000/manifest-safari.mpd"
+          }
+        }
+      ]
+    }
+  ]
+}

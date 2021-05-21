@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bundle.css" />
+    <title>Audio Orchestrator</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="bundle.js"></script>
+    <script>
+      
+      
+      
+      
+
+      // Any value specified in config.js may be overwritten here without having to rebuild the app.
+      const config = {
+  "LOCAL_SESSION_ID_PREFIX": "bbcat-orchestration-template",
+  "INITIAL_CONTENT_ID": "0d9a3b45-a7ea-4836-bc99-3117d9d09ef8",
+  "SEQUENCE_URLS": [
+    {
+      "name": "Intro",
+      "contentId": "0d9a3b45-a7ea-4836-bc99-3117d9d09ef8",
+      "url": "audio/0d9a3b45-a7ea-4836-bc99-3117d9d09ef8/sequence.json",
+      "hold": false,
+      "skippable": true,
+      "next": [
+        {
+          "contentId": "f5c6841f-b238-4774-b0af-741ea1b9d258",
+          "label": "Move on"
+        }
+      ]
+    },
+    {
+      "name": "Check Connected",
+      "contentId": "f5c6841f-b238-4774-b0af-741ea1b9d258",
+      "url": "audio/f5c6841f-b238-4774-b0af-741ea1b9d258/sequence.json",
+      "hold": true,
+      "skippable": true,
+      "next": [
+        {
+          "contentId": "10905be2-2891-43fc-bc5b-2bd7f0100e7a",
+          "label": "Next"
+        },
+        {
+          "contentId": "0ad72afe-9212-461e-aa91-0991ff788808",
+          "label": "Try Again"
+        }
+      ]
+    },
+    {
+      "name": "Try Again",
+      "contentId": "0ad72afe-9212-461e-aa91-0991ff788808",
+      "url": "audio/0ad72afe-9212-461e-aa91-0991ff788808/sequence.json",
+      "hold": true,
+      "skippable": true,
+      "next": [
+        {
+          "contentId": "10905be2-2891-43fc-bc5b-2bd7f0100e7a",
+          "label": "Next"
+        },
+        {
+          "contentId": "0d9a3b45-a7ea-4836-bc99-3117d9d09ef8",
+          "label": "Start again"
+        }
+      ]
+    },
+    {
+      "name": "Connection Successful",
+      "contentId": "10905be2-2891-43fc-bc5b-2bd7f0100e7a",
+      "url": "audio/10905be2-2891-43fc-bc5b-2bd7f0100e7a/sequence.json",
+      "hold": false,
+      "skippable": false,
+      "next": [
+        {
+          "contentId": "22ec8613-def5-409d-abee-535f44314958",
+          "label": "Show me user controls"
+        }
+      ]
+    },
+    {
+      "name": "Radio Buttons",
+      "contentId": "22ec8613-def5-409d-abee-535f44314958",
+      "url": "audio/22ec8613-def5-409d-abee-535f44314958/sequence.json",
+      "hold": false,
+      "skippable": true,
+      "next": [
+        {
+          "contentId": "502de404-9203-4114-aa05-9d1c0d7049dc",
+          "label": "Next"
+        }
+      ]
+    },
+    {
+      "name": "Outro",
+      "contentId": "502de404-9203-4114-aa05-9d1c0d7049dc",
+      "url": "audio/502de404-9203-4114-aa05-9d1c0d7049dc/sequence.json",
+      "hold": true,
+      "skippable": false,
+      "next": [
+        {
+          "contentId": "0d9a3b45-a7ea-4836-bc99-3117d9d09ef8",
+          "label": "Start again"
+        }
+      ]
+    }
+  ],
+  "CONTROLS": [
+    {
+      "controlId": "59a220e0-8e91-4d99-ac7a-4990a5b374c9",
+      "controlName": "Select to switch instrument tracks",
+      "controlType": "radio",
+      "controlDefaultValues": [
+        "8f4a3ba8-f4d0-4546-a1b3-6fb74f2e2948"
+      ],
+      "controlParameters": {
+        "options": [
+          {
+            "label": "Shakers",
+            "value": "310e523f-c920-45aa-8aa4-7cc2b53d7332"
+          },
+          {
+            "label": "Percussion",
+            "value": "d96fa639-7bc4-41dc-94f7-2267e01b40b2"
+          },
+          {
+            "label": "Drums and bass",
+            "value": "8f4a3ba8-f4d0-4546-a1b3-6fb74f2e2948"
+          },
+          {
+            "label": "Guitar synth",
+            "value": "4e18456e-1a96-4d67-a135-bb6d4f50868d"
+          }
+        ]
+      },
+      "controlBehaviours": [
+        {
+          "behaviourId": "f3d230bd-6481-485d-a0de-2276efefa9ee",
+          "behaviourType": "spread",
+          "behaviourParameters": {
+            "perDeviceGainAdjust": 1
+          }
+        },
+        {
+          "behaviourId": "3a4fe3d2-7349-4f79-819c-b20f7342f866",
+          "behaviourType": "allowedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "conditionId": "9dbac2dc-a8c4-4633-8c83-e40b16b11341",
+                "property": "device.deviceIsMain",
+                "operator": "anyOf",
+                "value": [
+                  "false"
+                ],
+                "invertCondition": false
+              },
+              {
+                "conditionId": "b039871e-f5fc-4b5e-92ce-f9758adc7741",
+                "property": "session.currentContentId",
+                "operator": "anyOf",
+                "value": [
+                  "0d9a3b45-a7ea-4836-bc99-3117d9d09ef8",
+                  "f5c6841f-b238-4774-b0af-741ea1b9d258",
+                  "0ad72afe-9212-461e-aa91-0991ff788808",
+                  "10905be2-2891-43fc-bc5b-2bd7f0100e7a",
+                  "502de404-9203-4114-aa05-9d1c0d7049dc"
+                ],
+                "invertCondition": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "CLOUDSYNC_ENDPOINT": {
+    "hostname": "cloudsync.virt.ch.bbc.co.uk"
+  },
+  "TEXT_TITLE": "Audio Orchestrator",
+  "TEXT_SUBTITLE": "Example project: Getting started with orchestration",
+  "TEXT_INTRODUCTION": "Use this simple project to check you can connect and hear sound on an aux device. Compare the project settings with this preview and see a user control in action. Hit \"Start new session\" to begin.",
+  "TEXT_START_LABEL": "Start new session",
+  "TEXT_JOIN_LABEL": "Join existing session",
+  "ACCENT_COLOUR": "#ff4855",
+  "DEBUG_UI": false,
+  "ENABLE_TUTORIAL": false,
+  "MDO_COMPRESSOR_RATIO": 0,
+  "MDO_COMPRESSOR_THRESHOLD": 0,
+  "OBJECT_FADE_OUT_DURATION": 0,
+  "PLAYER_IMAGE_URL": "images/3d1788d6-d02f-436c-9c79-3fc22dd8f007.jpg",
+  "TEXT_PLAYER_IMAGE_ALT": "The Audio Orchestrator default image, featuring a woman in a conducting pose and lots of lit-up musical instruments"
+};
+
+      // Instantiate the React app to render into the #app div:
+      initOrchestrationTemplate(document.getElementById('app'), config);
+    </script>
+    <noscript>
+      This page requires JavaScript to be enabled.
+    </noscript>
+  </body>
+</html>

@@ -1,0 +1,300 @@
+{
+  "duration": 68,
+  "loop": true,
+  "outPoints": [],
+  "objects": [
+    {
+      "objectId": "8-Radio_Buttons_Main_M",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 0,
+          "duration": 68,
+          "source": {
+            "channelMapping": "mono",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/22ec8613-def5-409d-abee-535f44314958/08_Radio_Buttons_Main_M_000000/manifest.mpd",
+            "urlSafari": "audio/22ec8613-def5-409d-abee-535f44314958/08_Radio_Buttons_Main_M_000000/manifest-safari.mpd"
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "9-Radio_Buttons_Aux_1_M",
+      "objectBehaviours": [
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "spread",
+          "behaviourParameters": {
+            "enableGainCompensation": false
+          }
+        },
+        {
+          "behaviourType": "allowedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "deviceControls.59a220e0-8e91-4d99-ac7a-4990a5b374c9",
+                "operator": "anyOf",
+                "value": [
+                  "310e523f-c920-45aa-8aa4-7cc2b53d7332"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "deviceControls.59a220e0-8e91-4d99-ac7a-4990a5b374c9",
+                "operator": "anyOf",
+                "value": [
+                  "310e523f-c920-45aa-8aa4-7cc2b53d7332"
+                ],
+                "invertCondition": true
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 0,
+          "duration": 68,
+          "source": {
+            "channelMapping": "mono",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/22ec8613-def5-409d-abee-535f44314958/09_Radio_Buttons_Aux_1_M_000000/manifest.mpd",
+            "urlSafari": "audio/22ec8613-def5-409d-abee-535f44314958/09_Radio_Buttons_Aux_1_M_000000/manifest-safari.mpd"
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "10-Radio_Buttons_Aux_2_M",
+      "objectBehaviours": [
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "spread",
+          "behaviourParameters": {
+            "enableGainCompensation": false
+          }
+        },
+        {
+          "behaviourType": "allowedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "deviceControls.59a220e0-8e91-4d99-ac7a-4990a5b374c9",
+                "operator": "anyOf",
+                "value": [
+                  "d96fa639-7bc4-41dc-94f7-2267e01b40b2"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "deviceControls.59a220e0-8e91-4d99-ac7a-4990a5b374c9",
+                "operator": "anyOf",
+                "value": [
+                  "d96fa639-7bc4-41dc-94f7-2267e01b40b2"
+                ],
+                "invertCondition": true
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 0,
+          "duration": 68,
+          "source": {
+            "channelMapping": "mono",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/22ec8613-def5-409d-abee-535f44314958/10_Radio_Buttons_Aux_2_M_000000/manifest.mpd",
+            "urlSafari": "audio/22ec8613-def5-409d-abee-535f44314958/10_Radio_Buttons_Aux_2_M_000000/manifest-safari.mpd"
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "11-Radio_Buttons_Aux_3_M",
+      "objectBehaviours": [
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "spread",
+          "behaviourParameters": {
+            "enableGainCompensation": false
+          }
+        },
+        {
+          "behaviourType": "allowedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "deviceControls.59a220e0-8e91-4d99-ac7a-4990a5b374c9",
+                "operator": "anyOf",
+                "value": [
+                  "8f4a3ba8-f4d0-4546-a1b3-6fb74f2e2948"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "deviceControls.59a220e0-8e91-4d99-ac7a-4990a5b374c9",
+                "operator": "anyOf",
+                "value": [
+                  "8f4a3ba8-f4d0-4546-a1b3-6fb74f2e2948"
+                ],
+                "invertCondition": true
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 0,
+          "duration": 68,
+          "source": {
+            "channelMapping": "mono",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/22ec8613-def5-409d-abee-535f44314958/11_Radio_Buttons_Aux_3_M_000000/manifest.mpd",
+            "urlSafari": "audio/22ec8613-def5-409d-abee-535f44314958/11_Radio_Buttons_Aux_3_M_000000/manifest-safari.mpd"
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "12-Radio_Buttons_Aux_4_M",
+      "objectBehaviours": [
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "spread",
+          "behaviourParameters": {
+            "enableGainCompensation": false
+          }
+        },
+        {
+          "behaviourType": "allowedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "deviceControls.59a220e0-8e91-4d99-ac7a-4990a5b374c9",
+                "operator": "anyOf",
+                "value": [
+                  "4e18456e-1a96-4d67-a135-bb6d4f50868d"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "deviceControls.59a220e0-8e91-4d99-ac7a-4990a5b374c9",
+                "operator": "anyOf",
+                "value": [
+                  "4e18456e-1a96-4d67-a135-bb6d4f50868d"
+                ],
+                "invertCondition": true
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 0,
+          "duration": 68,
+          "source": {
+            "channelMapping": "mono",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/22ec8613-def5-409d-abee-535f44314958/12_Radio_Buttons_Aux_4_M_000000/manifest.mpd",
+            "urlSafari": "audio/22ec8613-def5-409d-abee-535f44314958/12_Radio_Buttons_Aux_4_M_000000/manifest-safari.mpd"
+          }
+        }
+      ]
+    }
+  ]
+}

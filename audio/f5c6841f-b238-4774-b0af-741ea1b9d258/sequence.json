@@ -1,0 +1,79 @@
+{
+  "duration": 42.97,
+  "loop": false,
+  "outPoints": [],
+  "objects": [
+    {
+      "objectId": "3-Check_Connected",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 0,
+          "duration": 42.97,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/f5c6841f-b238-4774-b0af-741ea1b9d258/03_Check_Connected_000000/manifest.mpd",
+            "urlSafari": "audio/f5c6841f-b238-4774-b0af-741ea1b9d258/03_Check_Connected_000000/manifest-safari.mpd"
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "4-Check_Connected_Aux_M",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "spread",
+          "behaviourParameters": {
+            "enableGainCompensation": false
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 9.85,
+          "duration": 33.17,
+          "source": {
+            "channelMapping": "mono",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/f5c6841f-b238-4774-b0af-741ea1b9d258/04_Check_Connected_Aux_M_000000/manifest.mpd",
+            "urlSafari": "audio/f5c6841f-b238-4774-b0af-741ea1b9d258/04_Check_Connected_Aux_M_000000/manifest-safari.mpd"
+          }
+        }
+      ]
+    }
+  ]
+}

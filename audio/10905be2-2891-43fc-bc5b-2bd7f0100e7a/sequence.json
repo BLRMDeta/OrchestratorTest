@@ -1,0 +1,40 @@
+{
+  "duration": 8,
+  "loop": false,
+  "outPoints": [],
+  "objects": [
+    {
+      "objectId": "7-Connection_Successful_M",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 0,
+          "duration": 8,
+          "source": {
+            "channelMapping": "mono",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/10905be2-2891-43fc-bc5b-2bd7f0100e7a/07_Connection_Successful_M_000000.m4a",
+            "urlSafari": null
+          }
+        }
+      ]
+    }
+  ]
+}
